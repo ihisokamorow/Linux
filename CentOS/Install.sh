@@ -1,7 +1,7 @@
 # Create - 17/11/2018
 #
 #   ./install.sh
-#
+# https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300-preview1
 #
 #
 #
