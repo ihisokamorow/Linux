@@ -56,3 +56,27 @@ firewall-cmd --permanent --zone=public --add-service=https
 firewall-cmd --reload
 # Enable Nginx to start when your system boots start
 systemctl enable nginx
+# Status
+service nginx status
+# Recargar
+# service nginx reload
+
+# Si el servidor no arranca correctamente o muestra errores, podemos comprobar su configuración:
+# /usr/sbin/nginx -t
+# o bien, indicando el fichero de configuración
+# /usr/sbin/nginx -c /etc/nginx/nginx.conf -t
+
+
+###################################
+#       Servidor FTP
+###################################
+#
+yum -y update
+
+yum install -y vsftpd
+systemctl enable vsftpd.service
+systemctl status vsftpd.service
+
+firewall-cmd --zone=public --add-port=21/tcp --permanent
+firewall-cmd --permanent --add-port=21/tcp
+firewall-cmd --reload
