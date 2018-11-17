@@ -18,5 +18,10 @@ echo "Adding new users to LDAP Server..."
 COMMENT1
 echo "Searching for user..."
 
-yum install wget
 
+
+yum install wget
+##################################
+
+yum install -y  krb5-libs
+yum install -y  libicu
