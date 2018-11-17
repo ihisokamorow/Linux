@@ -23,5 +23,36 @@ echo "Searching for user..."
 yum install wget
 ##################################
 
-yum install -y  krb5-libs
-yum install -y  libicu
+yum install -y krb5-libs
+yum install -y libicu
+yum install -y libunwind
+
+
+###################################
+#   Paquetes Basicos necesarios
+###################################
+#
+yum -y update
+yum install -y wget # Permite descargar archivos solo utilizando la URL
+
+
+
+
+
+###################################
+#       Servidor Web
+###################################
+#
+yum -y update
+echo "Servidor Web by Nginx"
+echo "..."
+yum install -y epel-release         # Step One — Add Nginx Repository
+yum install -y nginx                # Step Two — Install Nginx
+systemctl start nginx               # Step Three — Start Nginx
+# systemctl stop nginx.service      # Detener el servicio
+# Firewall  commands to allow HTTP and HTTPS traffic
+firewall-cmd --permanent --zone=public --add-service=http 
+firewall-cmd --permanent --zone=public --add-service=https
+firewall-cmd --reload
+# Enable Nginx to start when your system boots start
+systemctl enable nginx
