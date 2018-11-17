@@ -1,1 +1,1 @@
-
+yum install wget
