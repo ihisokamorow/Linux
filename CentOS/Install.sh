@@ -42,7 +42,9 @@ yum install -y wget # Permite descargar archivos solo utilizando la URL
 ###################################
 #       Servidor Web
 ###################################
-#
+# 
+# /usr/share/nginx/html 
+
 yum -y update
 echo "Servidor Web by Nginx"
 echo "..."
