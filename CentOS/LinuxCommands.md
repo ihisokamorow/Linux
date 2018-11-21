@@ -1,5 +1,8 @@
-$ Usuario Regular
-# Usuario Root
+```shell
+$ // Usuario Regular
+# //  Usuario Root
+```
+
 [admin@CentOS home]$
 [root@CentOS home]#
 
